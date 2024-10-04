@@ -475,7 +475,7 @@ QStringList MinecraftInstance::javaArguments()
 {
     QStringList args;
 
-    args << "-Duser.language=en";
+    args << "-Dfile.encoding=UTF-8";
 
     // custom args go first. we want to override them if we have our own here.
     args.append(extraArguments());
