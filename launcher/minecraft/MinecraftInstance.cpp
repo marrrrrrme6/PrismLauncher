@@ -475,8 +475,6 @@ QStringList MinecraftInstance::javaArguments()
 {
     QStringList args;
 
-    args << "-Dfile.encoding=UTF-8";
-
     // custom args go first. we want to override them if we have our own here.
     args.append(extraArguments());
 
@@ -520,6 +518,7 @@ QStringList MinecraftInstance::javaArguments()
         }
     }
 
+    args << "-Dfile.encoding=UTF-8";
     args << "-Duser.language=en";
 
     if (javaVersion.isModular() && shouldApplyOnlineFixes())
